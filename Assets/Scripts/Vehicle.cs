@@ -1,7 +1,12 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Vehicle : MonoBehaviour
 {
+    private PlayerControls _playerControls;
+    private Vector2 _inputAxis;
+
     public bool controllable = true;
 
     [Header("Components")]
@@ -29,6 +34,8 @@ public class Vehicle : MonoBehaviour
 
     private void Awake()
     {
+        _playerControls = new PlayerControls();
+
         foreach (Transform t in GetComponentsInChildren<Transform>())
         {
             switch (t.name)
@@ -46,19 +53,45 @@ public class Vehicle : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (gameManager.gameOver) return;
+        _playerControls.Controls.Accelerate.performed += OnAccelerate;
+        _playerControls.Controls.Accelerate.canceled += OnAccelerate;
+        _playerControls.Controls.Rotate.performed += OnRotate;
+        _playerControls.Controls.Rotate.canceled += OnRotate;
+        _playerControls.Enable();
+    }
+    private void OnDisable()
+    {
+        _playerControls.Controls.Accelerate.performed -= OnAccelerate;
+        _playerControls.Controls.Accelerate.canceled -= OnAccelerate;
+        _playerControls.Controls.Rotate.performed -= OnRotate;
+        _playerControls.Controls.Rotate.canceled -= OnRotate;
+        _playerControls.Disable();
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+    public void OnAccelerate(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
         {
             touching = true;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        else
         {
             touching = false;
             touched = false;
         }
+    }
+
+    public void OnRotate(InputAction.CallbackContext context)
+    {
+        _inputAxis = context.ReadValue<Vector2>();
+    }
+
+
+    private void Update()
+    {
+        if (gameManager.gameOver) return;
 
         // Steering
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRot.rotation, Time.deltaTime * steering);
@@ -130,7 +163,7 @@ public class Vehicle : MonoBehaviour
             return;
 
         Vector3 v1 = Vector3.zero;
-        Vector3 v2 = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        Vector3 v2 = new Vector3(_inputAxis.x, _inputAxis.y, 0);
         v1 = v2.normalized;
         if (v1.sqrMagnitude < 1E-05f)
         {
