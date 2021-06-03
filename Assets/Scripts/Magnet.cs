@@ -14,8 +14,10 @@ public class Magnet : MonoBehaviour
         SteelGarbage
     };
 
+    public GarbageType GarbageVariant;
+
     [SerializeField]
-    private GarbageType _garbageType;
+    private GameManager _gameManager;
 
     void FixedUpdate()
     {
@@ -26,11 +28,11 @@ public class Magnet : MonoBehaviour
 
         foreach (Collider c in cols)
         {
-            if (c.CompareTag(_garbageType.ToString()))
+            if (c.CompareTag(GarbageVariant.ToString()))
             {
                 if (c)
                 {
-                    if (transform.CompareTag("MagneticSphere"))
+                    if (transform.CompareTag("MagneticSphere") && ((c.GetComponent<Garbage>().StorageAmount + GameManager.CurrentTruckStorage) <= GameManager.MaxTruckStorage))
                     {
                         c.GetComponent<Rigidbody>().MovePosition(Vector3.Lerp(c.transform.position, _collectionPoint.position, _magnetForce * Time.smoothDeltaTime));
                     }
