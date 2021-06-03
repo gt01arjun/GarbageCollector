@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4443701996694443568}
   - component: {fileID: 8744001405908659004}
   - component: {fileID: 2997041252561085483}
+  - component: {fileID: 1228276574414830659}
+  - component: {fileID: -4636030871503363265}
+  - component: {fileID: -4918517627645224801}
   m_Layer: 0
   m_Name: MetalPlane
   m_TagString: SteelGarbage
@@ -81,3 +84,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1228276574414830659
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124149864645171321}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 4
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!135 &-4636030871503363265
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124149864645171321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15493627
+  m_Center: {x: 0.000000014901161, y: -0.00000003725291, z: -0.002580128}
+--- !u!114 &-4918517627645224801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124149864645171321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02388536ba44382429be13e21db9fdda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7309673034285335091}
   - component: {fileID: 171741618908311002}
   - component: {fileID: 6715224879363040711}
+  - component: {fileID: 1771998023346155963}
+  - component: {fileID: -601403163978840310}
+  - component: {fileID: -7434261011591151708}
   m_Layer: 0
   m_Name: Chips
   m_TagString: PlasticGarbage
@@ -81,3 +84,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1771998023346155963
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875014088202421231}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 4
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!135 &-601403163978840310
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875014088202421231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.24470913
+  m_Center: {x: 0.000000037252903, y: 0, z: 0.0067193634}
+--- !u!114 &-7434261011591151708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875014088202421231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02388536ba44382429be13e21db9fdda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6537473879505359089}
   - component: {fileID: 7860503522029133652}
   - component: {fileID: 5400635121865862046}
+  - component: {fileID: 836068298885399972}
+  - component: {fileID: 1681057387711038986}
+  - component: {fileID: 3343411365176046521}
   m_Layer: 0
   m_Name: PlasticBag
   m_TagString: PlasticGarbage
@@ -81,3 +84,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &836068298885399972
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904805665083198027}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 4
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!135 &1681057387711038986
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904805665083198027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.28300813
+  m_Center: {x: -0.000046133995, y: 0.000106982916, z: 0.28284833}
+--- !u!114 &3343411365176046521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904805665083198027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02388536ba44382429be13e21db9fdda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
