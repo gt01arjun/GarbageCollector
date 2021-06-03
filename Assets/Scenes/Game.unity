@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 481659083}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Player
+  m_TagString: PlasticGarbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 995729716}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Player
+  m_TagString: PlasticGarbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 1480474567}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: PlasticGarbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1390,6 +1390,10 @@ PrefabInstance:
     - target: {fileID: 1681055422045361009, guid: 007f0c69d6e2c6c47a713e892d0f62bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987537889605303608, guid: 007f0c69d6e2c6c47a713e892d0f62bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 007f0c69d6e2c6c47a713e892d0f62bd, type: 3}

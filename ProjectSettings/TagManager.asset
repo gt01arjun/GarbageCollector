@@ -6,6 +6,9 @@ TagManager:
   tags:
   - MagneticSphere
   - MagnetTrigger
+  - PlasticGarbage
+  - PaperGarbage
+  - SteelGarbage
   layers:
   - Default
   - TransparentFX
