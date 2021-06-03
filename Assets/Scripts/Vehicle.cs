@@ -125,10 +125,10 @@ public class Vehicle : MonoBehaviour
 
         ControlAccelerate();
 
-        if (touching)
-        {
+        //if (touching)
+        //{
             ControlSteer();
-        }
+        //}
 
         RaycastHit hitNear;
         Physics.Raycast(transform.position, Vector3.down, out hitNear, 1.3f);
