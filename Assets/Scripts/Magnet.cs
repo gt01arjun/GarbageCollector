@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Magnet : MonoBehaviour
@@ -7,6 +6,16 @@ public class Magnet : MonoBehaviour
     private float _magnetForce;
     [SerializeField]
     private Transform _collectionPoint;
+
+    public enum GarbageType
+    {
+        PlasticGarbage,
+        PaperGarbage,
+        SteelGarbage
+    };
+
+    [SerializeField]
+    private GarbageType _garbageType;
 
     void FixedUpdate()
     {
@@ -17,7 +26,7 @@ public class Magnet : MonoBehaviour
 
         foreach (Collider c in cols)
         {
-            if (c.CompareTag("Player"))
+            if (c.CompareTag(_garbageType.ToString()))
             {
                 if (c)
                 {
