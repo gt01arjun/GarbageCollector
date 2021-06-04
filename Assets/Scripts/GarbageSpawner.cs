@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GarbageSpawner : MonoBehaviour
 {
-    public int numberOfGarbages;
+    public static int NumberOfGarbages;
 
     public GameObject[] spawnLocations;
 
@@ -10,7 +10,9 @@ public class GarbageSpawner : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 1; i <= numberOfGarbages; i++)
+        NumberOfGarbages = 21;
+
+        for (int i = 1; i <= NumberOfGarbages; i++)
         {
             var g = Random.Range(0, garbages.Length);
             var p = Random.Range(0, spawnLocations.Length);

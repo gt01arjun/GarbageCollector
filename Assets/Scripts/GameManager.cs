@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text TruckCapacityText;
     public TMP_Text ScoreText;
 
-    public GarbageSpawner GSpawner;
-
     private void Start()
     {
         CurrentTruckStorage = 0;
@@ -33,6 +31,10 @@ public class GameManager : MonoBehaviour
             {
                 TimeRemaining -= Time.deltaTime;
                 DisplayTime(TimeRemaining);
+            }
+            else
+            {
+                GameOver = true;
             }
         }
     }

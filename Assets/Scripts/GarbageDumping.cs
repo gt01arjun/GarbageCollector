@@ -10,6 +10,11 @@ public class GarbageDumping : MonoBehaviour
         {
             GameManager.Score += other.GetComponent<Garbage>().StorageAmount;
             GameManager.CurrentTruckStorage -= other.GetComponent<Garbage>().StorageAmount;
+            GarbageSpawner.NumberOfGarbages--;
+            if (GarbageSpawner.NumberOfGarbages <= 0)
+            {
+                GameManager.GameOver = true;
+            }
             Destroy(other.gameObject);
         }
     }
