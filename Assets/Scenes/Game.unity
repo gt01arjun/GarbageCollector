@@ -7308,7 +7308,7 @@ GameObject:
   - component: {fileID: 313769417}
   - component: {fileID: 313769416}
   m_Layer: 5
-  m_Name: 'Quit '
+  m_Name: 'QuitToMainMenu '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7330,7 +7330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 828, y: -287}
+  m_AnchoredPosition: {x: 828, y: -280}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313769416
@@ -7376,7 +7376,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 313769417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &313769417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9746,7 +9758,7 @@ GameObject:
   - component: {fileID: 454064821}
   - component: {fileID: 454064820}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: QuitToMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9814,7 +9826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 454064821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &454064821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11562,7 +11586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1920, y: 1250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516180466
 MonoBehaviour:
@@ -11573,7 +11597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 516180464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -11584,13 +11608,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5769b905181a3794abea6aa4b50d7a21, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+  m_Sprite: {fileID: 21300000, guid: 5769b905181a3794abea6aa4b50d7a21, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &516180467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12865,7 +12892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1681055421368579320, guid: 007f0c69d6e2c6c47a713e892d0f62bd, type: 3}
       propertyPath: acceleration
-      value: 17
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1681055422045361008, guid: 007f0c69d6e2c6c47a713e892d0f62bd, type: 3}
       propertyPath: m_Name
@@ -14015,7 +14042,7 @@ RectTransform:
   m_GameObject: {fileID: 644760462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1625, y: 0.88747, z: 1}
+  m_LocalScale: {x: 1.05, y: 0.88747, z: 1}
   m_Children: []
   m_Father: {fileID: 1758305387}
   m_RootOrder: 0
@@ -14023,7 +14050,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1920, y: 1250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644760464
 MonoBehaviour:
@@ -16321,7 +16348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769620999}
   m_Layer: 5
-  m_Name: Win
+  m_Name: WinScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16344,10 +16371,10 @@ RectTransform:
   m_Father: {fileID: 1609330126}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &774522429
 PrefabInstance:
@@ -16943,7 +16970,7 @@ GameObject:
   - component: {fileID: 800331529}
   - component: {fileID: 800331528}
   m_Layer: 5
-  m_Name: Play
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16965,7 +16992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348, y: -278}
+  m_AnchoredPosition: {x: 348, y: -280}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800331528
@@ -17011,7 +17038,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 800331529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &800331529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17060,7 +17099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803341053}
   m_Layer: 5
-  m_Name: Pause Menu
+  m_Name: PauseMenuScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17083,10 +17122,10 @@ RectTransform:
   m_Father: {fileID: 1609330126}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &804996036
 GameObject:
@@ -17398,7 +17437,7 @@ GameObject:
   - component: {fileID: 820468543}
   - component: {fileID: 820468542}
   m_Layer: 5
-  m_Name: 'Quit '
+  m_Name: QuitToMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17420,7 +17459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 828, y: -287}
+  m_AnchoredPosition: {x: 828, y: -280}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820468542
@@ -17466,7 +17505,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 820468543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &820468543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22422,7 +22473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003283794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnResume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003283794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22950,7 +23013,7 @@ GameObject:
   - component: {fileID: 1015246660}
   - component: {fileID: 1015246659}
   m_Layer: 5
-  m_Name: Play
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22972,7 +23035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348, y: -278}
+  m_AnchoredPosition: {x: 348, y: -280}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015246659
@@ -23018,7 +23081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015246660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661534243}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1015246660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36004,6 +36079,9 @@ MonoBehaviour:
   TimerText: {fileID: 526622641}
   TruckCapacityText: {fileID: 55968660}
   ScoreText: {fileID: 78347169}
+  PauseMenuScreen: {fileID: 803341052}
+  WinScreen: {fileID: 769620998}
+  LoseScreen: {fileID: 1758305386}
 --- !u!4 &1661534244
 Transform:
   m_ObjectHideFlags: 0
@@ -38210,7 +38288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758305387}
   m_Layer: 5
-  m_Name: Lose
+  m_Name: LoseScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38233,10 +38311,10 @@ RectTransform:
   m_Father: {fileID: 1609330126}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1760004244
 GameObject:
