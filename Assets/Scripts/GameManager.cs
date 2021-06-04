@@ -1,13 +1,18 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public bool gameOver;
-    public float TimeRemaining = 10;
+    public float TimeRemaining;
 
     public static int CurrentTruckStorage;
     public static int MaxTruckStorage;
     public static int Score;
+
+    public TMP_Text TimerText;
+    public TMP_Text TruckCapacityText;
+    public TMP_Text ScoreText;
 
     private void Start()
     {
@@ -18,11 +23,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        ScoreText.text = "Score : " + Score;
+        TruckCapacityText.text = "Capacity : " + CurrentTruckStorage + " / " + MaxTruckStorage;
         if (TimeRemaining > 0)
         {
             TimeRemaining -= Time.deltaTime;
             DisplayTime(TimeRemaining);
-
         }
     }
 
@@ -30,6 +36,6 @@ public class GameManager : MonoBehaviour
     {
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        //timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        TimerText.text = "Time Remaining : " + string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

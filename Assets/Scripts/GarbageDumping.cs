@@ -9,8 +9,8 @@ public class GarbageDumping : MonoBehaviour
         if (other.CompareTag(DumpingAreaName))
         {
             GameManager.Score += other.GetComponent<Garbage>().StorageAmount;
+            GameManager.CurrentTruckStorage -= other.GetComponent<Garbage>().StorageAmount;
             Destroy(other.gameObject);
-            Debug.Log(GameManager.Score);
         }
     }
 }
