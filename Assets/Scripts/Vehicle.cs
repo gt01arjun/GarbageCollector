@@ -27,7 +27,6 @@ public class Vehicle : MonoBehaviour
     private Transform wheelFrontLeft, wheelFrontRight;
     private ParticleSystem smokeLeft, smokeRight;
 
-    private GameManager gameManager;
     private Vector3 lastTouchPos;
     private float speed, speedTarget;
 
@@ -50,7 +49,6 @@ public class Vehicle : MonoBehaviour
                 case "SmokeRight": smokeRight = t.GetComponent<ParticleSystem>(); break;
             }
         }
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnEnable()
@@ -91,7 +89,7 @@ public class Vehicle : MonoBehaviour
 
     private void Update()
     {
-        if (gameManager.gameOver) return;
+        if (GameManager.GameOver) return;
 
         // Steering
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRot.rotation, Time.deltaTime * steering);
@@ -122,7 +120,7 @@ public class Vehicle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.gameOver)
+        if (GameManager.GameOver)
             return;
 
         ControlAccelerate();

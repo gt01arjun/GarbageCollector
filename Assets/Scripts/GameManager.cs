@@ -3,7 +3,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public bool gameOver;
+    public static bool GameOver;
     public float TimeRemaining;
 
     public static int CurrentTruckStorage;
@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text TruckCapacityText;
     public TMP_Text ScoreText;
 
+    public GarbageSpawner GSpawner;
+
     private void Start()
     {
         CurrentTruckStorage = 0;
@@ -23,12 +25,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        ScoreText.text = "Score : " + Score;
-        TruckCapacityText.text = "Capacity : " + CurrentTruckStorage + " / " + MaxTruckStorage;
-        if (TimeRemaining > 0)
+        if (GameOver == false)
         {
-            TimeRemaining -= Time.deltaTime;
-            DisplayTime(TimeRemaining);
+            ScoreText.text = "Score : " + Score;
+            TruckCapacityText.text = "Capacity : " + CurrentTruckStorage + " / " + MaxTruckStorage;
+            if (TimeRemaining > 0)
+            {
+                TimeRemaining -= Time.deltaTime;
+                DisplayTime(TimeRemaining);
+            }
         }
     }
 
