@@ -13,7 +13,7 @@ public class Vehicle : MonoBehaviour
     public Rigidbody sphere;
 
     [Header("Parameters")]
-    [Range(5.0f, 50.0f)] public float acceleration = 30f;
+    [Range(1.0f, 50.0f)] public float acceleration = 30f;
     [Range(0, 160.0f)] public float steering = 80f;
     [Range(0.0f, 20.0f)] public float gravity = 10f;
     [Range(0.0f, 1.0f)] public float drift = 1f;
