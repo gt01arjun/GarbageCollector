@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,6 +34,7 @@ public class Vehicle : MonoBehaviour
     private void Awake()
     {
         _playerControls = new PlayerControls();
+
 
         foreach (Transform t in GetComponentsInChildren<Transform>())
         {
@@ -96,6 +96,8 @@ public class Vehicle : MonoBehaviour
         // Steering
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRot.rotation, Time.deltaTime * steering);
 
+        sphere.rotation = transform.rotation;
+
         // Acceleration
         speedTarget = Mathf.SmoothStep(speedTarget, speed * 0.25f, Time.deltaTime * 12f);
         speed = 0f;
@@ -124,11 +126,7 @@ public class Vehicle : MonoBehaviour
             return;
 
         ControlAccelerate();
-
-        //if (touching)
-        //{
-            ControlSteer();
-        //}
+        ControlSteer();
 
         RaycastHit hitNear;
         Physics.Raycast(transform.position, Vector3.down, out hitNear, 1.3f);

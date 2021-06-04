@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6391083129112948504}
   - component: {fileID: 5823873688389492519}
   - component: {fileID: -5802983152477129842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MetalBin
   m_TagString: SteelGarbage
   m_Icon: {fileID: 0}

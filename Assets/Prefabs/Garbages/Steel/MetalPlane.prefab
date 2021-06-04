@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1228276574414830659}
   - component: {fileID: -4636030871503363265}
   - component: {fileID: -4918517627645224801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MetalPlane
   m_TagString: SteelGarbage
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1197471012243354428}
   - component: {fileID: 2186712496427404321}
   - component: {fileID: 8246253261943424245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GarbageCan
   m_TagString: SteelGarbage
   m_Icon: {fileID: 0}

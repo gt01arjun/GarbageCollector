@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 836068298885399972}
   - component: {fileID: 1681057387711038986}
   - component: {fileID: 3343411365176046521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlasticBag
   m_TagString: PlasticGarbage
   m_Icon: {fileID: 0}

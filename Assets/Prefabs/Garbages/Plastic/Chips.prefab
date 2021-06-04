@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1771998023346155963}
   - component: {fileID: -601403163978840310}
   - component: {fileID: -7434261011591151708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chips
   m_TagString: PlasticGarbage
   m_Icon: {fileID: 0}
