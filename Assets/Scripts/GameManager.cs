@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CurrentTruckStorage = 0;
-        MaxTruckStorage = 15;
+        MaxTruckStorage = 10;
         Score = 0;
     }
 
